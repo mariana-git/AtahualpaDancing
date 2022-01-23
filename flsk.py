@@ -9,7 +9,7 @@ currentdirectory = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__)
 
-@app.route("/index")
+@app.route("/")
 def main():
     return render_template("index.html")
 
