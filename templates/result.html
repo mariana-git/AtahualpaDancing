@@ -1,0 +1,42 @@
+{% extends "layout.html" %}   
+
+{% block title %}Gracias! {% endblock%}
+
+{% block header %}
+<img class="logo logo-header" src="/static/img/logo.jpeg" alt="Logo de Atahualpa Dancing">
+{% endblock%}
+
+{%block body%}
+
+<div class="principal">
+    <div class="container-form">
+        <div class="media-content">
+            <p class="msg"> {{msg}} </p>
+            <p class="result">¡También podés encontrarnos en las Redes Sociales!</p>
+
+            <div class="social-media">
+                <div class="arrow">
+                    <span></span>
+                    <span></span>  
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>  
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>  
+                </div>
+            </div>
+            <div class="social-media">
+                
+                <a href="https://api.whatsapp.com/send?phone=541169525730" class="social-media-icon"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.instagram.com/atahualpa.dancing/" class="social-media-icon"><i class='bx bxl-instagram' ></i></a>            
+                <a href="https://www.facebook.com/Atahualpa-Dancing-101603588932384/" class="social-media-icon"><i class='bx bxl-facebook' ></i></a>   
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

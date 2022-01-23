@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atahualpa Dancing - {% block title %} {% endblock%}</title>
+    <link href="{{url_for('static',filename='css/style.css')}}" rel='stylesheet' type="text/css">
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/static/img/AD icon.png">
+</head>
+
+<body>
+    <nav>
+        <p></p>
+        
+        <button id="burger" class="burger logo">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        
+        <ul>
+            <li><a href="./">Inicio</a></li>
+            <li><a href="/gallery">Galería</a></li>
+            <li><a href="/contact">Contactanos</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        {% block header %}
+        {% endblock%}
+    </header>
+    
+    {% block body %}
+    {% endblock%}
+    
+
+    <footer>
+        <p >Powered by Mariana Sayago | BsAs AR</p>  
+    </footer>
+    <script src="/static/js/slider.js"></script>
+    <script src="/static/js/menu.js"></script>
+    <script src="/static/js/index.js"></script> 
+    
+</body>
+
+</html> 

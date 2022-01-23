@@ -1,0 +1,53 @@
+{% extends "layout.html" %}    
+
+{% block title %} Galería {% endblock%}
+
+{% block header %}
+<img class="logo logo-header" src="/static/img/logo.jpeg" alt="Logo de Atahualpa Dancing">
+{% endblock%}
+
+{%block body%}
+<div >
+<div class="principal v-center">
+
+  <div>
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+  <br>
+  <div class="slideshow-container">
+    
+    <div class="slides fade sl-horiz" >
+            <iframe src="https://player.vimeo.com/video/666323553?h=d959442760&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen 
+            class="ifr-horiz" ></iframe>
+    </div>
+    
+    <div class="slides fade sl-vert">
+          <iframe src="https://player.vimeo.com/video/666323702?h=ff9cd3c05b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen 
+          class="ifr-vert"></iframe>
+    </div>
+    
+    <div class="slides fade sl-vert">
+      <iframe src="https://player.vimeo.com/video/666323644?h=0e405f066c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen 
+      class="ifr-vert"> ></iframe>
+    </div>
+
+    <div class="slides fade sl-vert">
+          <iframe src="https://player.vimeo.com/video/666323618?h=fc64a6c1e0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+          frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen 
+          class="ifr-vert"></iframe>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    
+</div>
+</div>
+{% endblock %}

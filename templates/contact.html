@@ -1,0 +1,35 @@
+{% extends "layout.html" %}   
+
+{% block title %}Contacto {% endblock%}
+
+{% block header %}
+<img class="logo logo-header" src="/static/img/logo.jpeg" alt="Logo de Atahualpa Dancing">
+{% endblock%}
+
+{%block body%}
+<div class="principal">
+    <div class="container-form">
+        <div class="media-content"><p class="contact">Contactanos!</p></div>
+        <div >
+            
+            <form action="{{ url_for('result') }}" method="post">
+                <input name="name"   type="text"  placeholder="  Nombre..." required/>
+                <input name="cel"   type="number"  placeholder="  Celular..." required/>
+                <input name="mail"   type="email" placeholder="  Mail..."/>
+                <textarea name="message" placeholder=" Mensaje..." required></textarea>
+                <span class= "content-button"><button name="enviar" type="submit">Enviar</button></span> 
+            </form>
+        </div>
+        <div class="media-content">
+            <div class="social-media">
+                <a href="https://api.whatsapp.com/send?phone=541169525730" class="social-media-icon"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.instagram.com/atahualpa.dancing/" class="social-media-icon"><i class='bx bxl-instagram' ></i></a>            
+                <a href="https://www.facebook.com/Atahualpa-Dancing-101603588932384/" class="social-media-icon"><i class='bx bxl-facebook' ></i></a>   
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
