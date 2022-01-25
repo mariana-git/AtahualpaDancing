@@ -4,7 +4,10 @@ from flask import Flask, render_template,request, url_for
 import sqlite3 
 import os
 
-currentdirectory = os.path.dirname(os.path.abspath(__file__))
+
+BASE_DIR =  os.path.abspath(os.path.dirname(__file__))
+DB_URI = "sqlite:///" + os.path.join(BASE_DIR, "/db/contactos.db")
+
 
 
 app = Flask(__name__)
@@ -23,13 +26,13 @@ def contact():
 
 @app.route("/result",methods = ["POST"])  
 def result():
-    msg = "msg"
+    msg = "msg"    
+    connection = sqlite3.connect(BASE_DIR + "/db/contactos.db")
     try:
         name = request.form["name"]
         cel = request.form["cel"]
         mail = request.form["mail"]
         message = request.form["message"]
-        connection = sqlite3.connect(currentdirectory + "\contactos.db")
         cursor = connection.cursor()
         query1 = "INSERT INTO Contactos (Nombre, Celular, Mail, Mensaje) VALUES ('{n}',{p},'{m}','{ms}');".format(n=name,p=cel,m=mail,ms=message)
         cursor.execute(query1)
