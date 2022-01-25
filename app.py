@@ -1,16 +1,16 @@
+from distutils.log import debug
 from multiprocessing import connection
 from sre_constants import SUCCESS
 from flask import Flask, render_template,request, url_for
+import models as dbHandler
 import sqlite3 
 import os
-
 
 BASE_DIR =  os.path.abspath(os.path.dirname(__file__))
 DB_URI = "sqlite:///" + os.path.join(BASE_DIR, "/db/contactos.db")
 
-
-
 app = Flask(__name__)
+
 
 @app.route("/")
 def main():
@@ -27,7 +27,7 @@ def contact():
 @app.route("/result",methods = ["POST"])  
 def result():
     msg = "msg"    
-    connection = sqlite3.connect(BASE_DIR + "/db/contactos.db")
+    connection = sqlite3.connect(BASE_DIR + "/db/contactos.db",check_same_thread=False)
     try:
         name = request.form["name"]
         cel = request.form["cel"]
@@ -45,8 +45,23 @@ def result():
     finally:
         connection.close()
         return render_template("result.html",msg = msg)
-            
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+
+@app.route('/data', methods=['POST', 'GET'])
+def data():
+        if request.method=='POST':        
+                username = request.form['username']
+                password = request.form['password']
+                dbHandler.insertUser(username, password)
+                users = dbHandler.retrieveContacts()
+                return render_template('data.html', users=users)
+        else:
+                return render_template('index.html')
  
 
 if __name__ ==  '__main__':
-    app.run()
+    app.run(debug=True)
