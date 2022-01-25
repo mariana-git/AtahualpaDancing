@@ -7,7 +7,6 @@ import os
 
 BASE_DIR =  os.path.abspath(os.path.dirname(__file__))
 DB_URI = "sqlite:///" + os.path.join(BASE_DIR, "contactos.db")
-connection = sqlite3.connect(BASE_DIR + "\contactos.db")
 
 
 
@@ -27,7 +26,8 @@ def contact():
 
 @app.route("/result",methods = ["POST"])  
 def result():
-    msg = "msg"
+    msg = "msg"    
+    connection = sqlite3.connect(BASE_DIR + "\contactos.db")
     try:
         name = request.form["name"]
         cel = request.form["cel"]
