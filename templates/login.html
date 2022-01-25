@@ -1,0 +1,22 @@
+{% extends "layout.html" %}   
+
+{% block title %}Contacto {% endblock%}
+
+{% block header %}
+<img class="logo logo-header" src="/static/img/logo.jpeg" alt="Logo de Atahualpa Dancing">
+{% endblock%}
+
+{%block body%}
+<div class="principal">
+    <div class="container-form">
+            <form action="{{ url_for('data') }}" method="post">
+                <input name="username"   type="text"  placeholder="  Nombre..." required/>
+                <input name="password"   type="text"  placeholder="  Constraseña..." required/>
+                <span class= "content-button"><button name="Log In" type="submit">Log In</button></span> 
+            </form>  
+    </div>
+
+</div>
+
+
+{% endblock %}

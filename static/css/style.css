@@ -37,6 +37,18 @@ header{
 	font-size: 50px;	  
 	}
 
+table, th, td {
+	border: 1px solid black;
+	padding: 5px;
+}
+table {
+	align-items: center;
+	display: block;
+	border-collapse: collapse;
+	background-color:#f8f4b7;
+	margin-top: 15px;
+}
+
 /***************************************************************** MENU */
 nav {
 	background: linear-gradient(to bottom,  #f3d552,#f54d0a);
