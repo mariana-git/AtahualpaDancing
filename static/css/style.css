@@ -39,7 +39,7 @@ header{
 
 table, th, td {
 	border: 1px solid black;
-	padding: 5px;
+	padding: 10px;
 }
 table {
 	align-items: center;
@@ -47,6 +47,15 @@ table {
 	border-collapse: collapse;
 	background-color:#f8f4b7;
 	margin-top: 15px;
+}
+.msg{
+	margin-bottom: 15px;
+	color: #e9e514;
+	font-size:larger;
+	font-weight: bolder;
+	animation: flash;	
+	animation-duration: 1s; 
+	animation-iteration-count: 2;
 }
 
 /***************************************************************** MENU */
