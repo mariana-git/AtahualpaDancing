@@ -2,9 +2,7 @@ from distutils.log import debug
 from multiprocessing import connection
 from sre_constants import SUCCESS
 from flask import Flask, render_template,request, url_for,session
-import markupsafe
 import models as dbHandler
-import sqlite3 
 import os
 
 BASE_DIR =  os.path.abspath(os.path.dirname(__file__))
@@ -47,8 +45,8 @@ def data():
         password = request.form['password']
         exist = dbHandler.loginUser(username,password)
         if exist:           
-            users = dbHandler.retrieveContacts()
-            return render_template('data.html', users=users)
+            contacts = dbHandler.retrieveContacts()
+            return render_template('data.html', contacts=contacts)
         else:
             msg = 'Login Incorrecto!'
             return render_template('login.html', msg = msg)

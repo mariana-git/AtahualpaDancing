@@ -32,7 +32,8 @@ def loginUser(username,password):
 def retrieveContacts():	
 	con = sql.connect(BASE_DIR + "/db/contactos.db",check_same_thread=False)
 	cur = con.cursor()
-	cur.execute("SELECT * FROM Contactos")
-	users = cur.fetchall()
+	#cur.execute("SELECT strftime('%d-%m-%Y',Fecha) as Fecha,Nombre,Celular,Mail,Mensaje FROM Contactos ORDER BY Fecha DESC;")
+	cur.execute("SELECT * FROM Contactos ORDER BY Fecha DESC;")
+	contacts = cur.fetchall()
 	con.close()
-	return users
+	return contacts

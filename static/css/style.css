@@ -37,17 +37,6 @@ header{
 	font-size: 50px;	  
 	}
 
-table, th, td {
-	border: 1px solid black;
-	padding: 10px;
-}
-table {
-	align-items: center;
-	display: block;
-	border-collapse: collapse;
-	background-color:#f8f4b7;
-	margin-top: 15px;
-}
 .msg{
 	margin-bottom: 15px;
 	color: #e9e514;
@@ -445,6 +434,38 @@ button[type=submit]:hover{
   background: #fff;
   color:#4b1111;
 }
+
+/**************************************  TABLE	*/
+.wrapper-table{
+  margin: 0 auto;
+  max-width: 60%;
+  overflow-x:auto;
+}
+
+table, th, td {
+	border: 1px solid black;
+	padding: 10px;
+	
+	border-collapse: collapse;
+}
+table {
+	margin: 0 0 40px 0;
+	width: 100%;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+td{
+	color:#4b1111;
+	min-width: 110px;
+}
+th{
+	background:#4b1111;
+	color: #f6f6f6;
+	font-weight: bold;
+	border: 1px solid white;
+}
+tr:nth-child(even) {background-color: #f3f4c1;}
+tr:nth-child(odd) {background-color: #f3cda2;}
+
  /*********************************** FOOTER*/
  footer{
 	background: linear-gradient(to top,  #f3d552,#f54d0a);
@@ -525,5 +546,16 @@ button[type=submit]:hover{
 	.arrow{
 		width: 10vw;
 		height: 10vw;
+	}
+	.wrapper-table{
+		max-width: 80%;
+	}
+	.table,td {
+		display: block;
+		padding: 7px;
+		border: none;
+	}
+	th{
+		display: none;
 	}
 }
