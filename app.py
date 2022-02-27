@@ -1,13 +1,16 @@
+from distutils.log import debug
 from multiprocessing import connection
 from sre_constants import SUCCESS
 from flask import Flask, render_template,request, url_for
+import models as dbHandler
 import sqlite3 
 import os
 
-currentdirectory = os.path.dirname(os.path.abspath(__file__))
-
+BASE_DIR =  os.path.abspath(os.path.dirname(__file__))
+DB_URI = "sqlite:///" + os.path.join(BASE_DIR, "/db/contactos.db")
 
 app = Flask(__name__)
+
 
 @app.route("/")
 def main():
@@ -23,13 +26,13 @@ def contact():
 
 @app.route("/result",methods = ["POST"])  
 def result():
-    msg = "msg"
+    msg = "msg"    
+    connection = sqlite3.connect(BASE_DIR + "/db/contactos.db",check_same_thread=False)
     try:
         name = request.form["name"]
         cel = request.form["cel"]
         mail = request.form["mail"]
         message = request.form["message"]
-        connection = sqlite3.connect(currentdirectory + "\contactos.db")
         cursor = connection.cursor()
         query1 = "INSERT INTO Contactos (Nombre, Celular, Mail, Mensaje) VALUES ('{n}',{p},'{m}','{ms}');".format(n=name,p=cel,m=mail,ms=message)
         cursor.execute(query1)
@@ -42,8 +45,23 @@ def result():
     finally:
         connection.close()
         return render_template("result.html",msg = msg)
-            
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+
+@app.route('/data', methods=['POST', 'GET'])
+def data():
+        if request.method=='POST':        
+                username = request.form['username']
+                password = request.form['password']
+                dbHandler.insertUser(username, password)
+                users = dbHandler.retrieveContacts()
+                return render_template('data.html', users=users)
+        else:
+                return render_template('index.html')
  
 
 if __name__ ==  '__main__':
-    app.run()
+    app.run(debug=True)

@@ -37,6 +37,18 @@ header{
 	font-size: 50px;	  
 	}
 
+table, th, td {
+	border: 1px solid black;
+	padding: 5px;
+}
+table {
+	align-items: center;
+	display: block;
+	border-collapse: collapse;
+	background-color:#f8f4b7;
+	margin-top: 15px;
+}
+
 /***************************************************************** MENU */
 nav {
 	background: linear-gradient(to bottom,  #f3d552,#f54d0a);
@@ -151,7 +163,7 @@ ul li a:hover::after {
 	position: relative;
 	margin: auto;
 	width: 80%;
-    height: 43vw;
+    height: 44vw;
 	background-color: rgba(0,0,0,0.8);
 }
 
@@ -268,12 +280,12 @@ to {opacity: 1}
 }
   
 .circle {
-	background: rgb(202, 10, 10);
+	background: #000;
 	width: 25%;
 	border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
 	overflow: hidden;
 	animation: morph 3s linear infinite;
-	display: inline-block;
+	display: inline-flex;
 }
 
 .circle img {

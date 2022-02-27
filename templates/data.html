@@ -1,0 +1,42 @@
+{% extends "layout.html" %}   
+
+{% block title %}Gracias! {% endblock%}
+
+{% block header %}
+<img class="logo logo-header" src="/static/img/logo.jpeg" alt="Logo de Atahualpa Dancing">
+{% endblock%}
+
+{%block body%}
+
+<div class="principal">
+  {%if users%}
+  <div class="users">
+    <h2>DATA</h2>
+    <table>
+     <tr>
+
+       <th>NOMBRE</th>
+   
+       <th>TELÉFONO</th>
+   
+       <th>MAIL</th>
+
+       <th>MENSAJE</th>
+   
+     </tr>
+      {%for user in users%}
+        <tr>
+          <td>{{user[1]}}</td>
+          <td>{{user[2]}}</td>
+          <td>{{user[3]}}</td>
+          <td>{{user[4]}}</td>
+        </tr>   
+      {%endfor%}
+    </table>
+  </div>
+  {%endif%}
+
+   
+</div>
+
+{% endblock %}
