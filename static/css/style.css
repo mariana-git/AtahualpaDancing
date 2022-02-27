@@ -315,7 +315,7 @@ to {opacity: 1}
 	animation-iteration-count: 3;
   }
 
-input[type=text], [type=email], [type=number], textarea {
+input[type=text], [type=password], [type=email], [type=number], textarea {
     width: 100%;
     padding: 10px;
     border: 0.5px solid #3d0d0d;
