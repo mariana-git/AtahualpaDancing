@@ -1,6 +1,6 @@
 {% extends "layout.html" %}   
 
-{% block title %}Gracias! {% endblock%}
+{% block title %} Mensajes {% endblock%}
 
 {% block header %}
 <img class="logo logo-header" src="/static/img/logo.jpeg" alt="Logo de Atahualpa Dancing">
@@ -9,11 +9,12 @@
 {%block body%}
 
 <div class="principal">
-  {%if users%}
-  <div class="users">
-    <h2>DATA</h2>
+  {%if contacts%}
+  <div class="wrapper-table">
+    <h2>REGISTRO</h2><br>
     <table>
      <tr>
+       <th>FECHA</th>
 
        <th>NOMBRE</th>
    
@@ -24,18 +25,18 @@
        <th>MENSAJE</th>
    
      </tr>
-      {%for user in users%}
+      {%for contacts in contacts%}
         <tr>
-          <td>{{user[1]}}</td>
-          <td>{{user[2]}}</td>
-          <td>{{user[3]}}</td>
-          <td>{{user[4]}}</td>
+          <td>{{contacts[5]}}</td>
+          <td>{{contacts[1]}}</td>
+          <td>{{contacts[2]}}</td>
+          <td>{{contacts[3]}}</td>
+          <td>{{contacts[4]}}</td>
         </tr>   
       {%endfor%}
     </table>
   </div>
   {%endif%}
-
    
 </div>
 

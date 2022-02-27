@@ -1,6 +1,6 @@
 {% extends "layout.html" %}   
 
-{% block title %}Contacto {% endblock%}
+{% block title %} Login {% endblock%}
 
 {% block header %}
 <img class="logo logo-header" src="/static/img/logo.jpeg" alt="Logo de Atahualpa Dancing">
@@ -9,11 +9,14 @@
 {%block body%}
 <div class="principal">
     <div class="container-form">
+        <p class="msg"> {{msg}} </p>  
             <form action="{{ url_for('data') }}" method="post">
                 <input name="username"   type="text"  placeholder="  Nombre..." required/>
-                <input name="password"   type="text"  placeholder="  Constraseña..." required/>
+                <input name="password"  TYPE="password" type="text"  placeholder="  Contraseña..." required/>
                 <span class= "content-button"><button name="Log In" type="submit">Log In</button></span> 
-            </form>  
+            </form>
+            
+            
     </div>
 
 </div>
