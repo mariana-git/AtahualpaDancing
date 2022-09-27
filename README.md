@@ -67,6 +67,11 @@ Utilizar todas las herramientas aprendidas durante la cursada, por lo cual NO se
   <img width="460" src="https://user-images.githubusercontent.com/88113403/192398457-afab8f4b-4c6c-4fbb-854d-51367a533711.png">
 </p>
 
+### 🔸 Diseño Responsive
+
+<p align="center">
+  <img width="300" height="300" src="https://user-images.githubusercontent.com/88113403/192400910-82fefbc7-94c0-47f2-a95f-07c7593916a9.gif">
+</p>
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
