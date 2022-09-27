@@ -15,7 +15,7 @@
 
 ## 🔵Descripción del proyecto
 El presente software es el proyecto final del Curso "FullStack Python" del Programa Codo a Codo, con una duración de 6 meses, cursado en el 2021/2022 (BsAs - AR).
-El mismo constaba de desarrollar una página web y realizar el deploy para que la misma sea accesible desde cualquier navegador.
+El mismo proponía desarrollar una página web y realizar el deploym para que la misma sea accesible desde cualquier navegador.
 
 
 ## 🔵 Requerimientos Generales
@@ -25,10 +25,13 @@ Utilizar todas las herramientas aprendidas durante la cursada, por lo cual NO se
 
 ## 🔵 Requerimientos Específicos
 
- 1️⃣ Desarrollar una página web cuyo Front conste de tres pantallas:   🔸Landing Page    🔸 Productos o Servicios   🔸 Página de Contacto
- 2️⃣ Desarrollar el Back con Python 
- 3️⃣ Que tenga integración con una base de datos
- 4️⃣ Entrega de sitio web navegable: El sitio debe quedar levantado en un hosting.
+- Desarrollar una página web cuyo Front conste de tres pantallas:   🔸Landing Page    🔸 Productos o Servicios   🔸 Página de Contacto
+ 
+- Desarrollar el Back con Python 
+ 
+- Que tenga integración con una base de datos
+ 
+- Entrega de sitio web navegable: El sitio debe quedar levantado en un hosting.
 
   
 ## 🔵 Tecnologías utilizadas
@@ -73,6 +76,6 @@ Utilizar todas las herramientas aprendidas durante la cursada, por lo cual NO se
   <img width="300" height="300" src="https://user-images.githubusercontent.com/88113403/192400910-82fefbc7-94c0-47f2-a95f-07c7593916a9.gif">
 </p>
 
-## License
+## 🔵 Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
 
