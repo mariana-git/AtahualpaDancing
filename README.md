@@ -1,7 +1,7 @@
 <div align="center">
 
 
-# ◻️〰️▪️ TP FINAL: Creación de Sitio Web〰️✤
+# ▪️ TP FINAL: Creación de Sitio Web〰️✤
 
 <p align="center">
 
@@ -25,7 +25,10 @@ Utilizar todas las herramientas aprendidas durante la cursada, por lo cual NO se
 
 ## 🔵 Requerimientos Específicos
 
-- Desarrollar una página web cuyo Front conste de tres pantallas:   🔸Landing Page    🔸 Productos o Servicios   🔸 Página de Contacto
+- Desarrollar una página web cuyo Front conste de tres pantallas:   
+-🔸Landing Page    
+-🔸 Productos o Servicios   
+-🔸 Página de Contacto
  
 - Desarrollar el Back con Python 
  
